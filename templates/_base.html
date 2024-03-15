@@ -1,0 +1,81 @@
+{% load static %}
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{% static 'css/blog/bootstrap.css' %}">
+{#    <link rel="stylesheet" href="{% static 'css/blog/font-awesome.min.css' %}">#}
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'css/blog/style.css' %}">
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+<header>
+    <div class="top-menu">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2 text-left">
+                    <div class="logo">
+                        <img src="{% static 'img/blog/logo.png' %}" alt="">
+                    </div>
+                </div>
+                <div class="col-md-10">
+                    <div class="main-menu">
+                        <ul>
+                            <li><a href="{% url 'home' %}">Home</a></li>
+                            <li><a href="{% url 'posts_list' %}">Blog</a></li>
+                            <li><a href="{% url 'post_create' %}">New Post</a></li>
+                            {% if user.is_authenticated %}
+                                <li class="my_li"><a>
+                                <form action="{% url 'logout' %}" method="post" >
+                                {% csrf_token %}
+                                    <button class='btn_sub' type="submit"  ><i class="fa fa-sign-out-alt" style="font-size:18px;margin-top:1px; "></i> Log Out</button>
+                                </form></a>    </li>
+                                <li class="my_li"><a> Welcome <i class="fa fa-user" >{{ user.username }}</i></a>  |</li>
+                             {% else %}
+                                <li  class="fa fa-sign-in-alt my_li"><a href="{% url 'login' %}" >login</a></li>
+                                <li  class="fa fa-sign-in-alt my_li"><a href="{% url 'signup' %}" >Sign UP</a>  |</li>
+                            {% endif %}
+
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+{% block content %}
+
+{% endblock %}
+<footer>
+    <div class="footer text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="footer-desc">
+                        <h3>Write My Essay</h3>
+                        <p>Our recognizable writing organization will assist you in any problem</p>
+                    </div>
+                    <div class="footer-social">
+                        <ul>
+                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-copy-r">
+                        <p>&copy;&nbsp;All Rights Reserved</p>
+                        <br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
+<script src="{% static 'js/blog/jquery.js' %}"></script>
+<script src="{% static 'js/blog/bootstrap.js' %}"></script>
+<script src="{% static 'js/blog/index.js' %}"></script>

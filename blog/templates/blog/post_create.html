@@ -1,0 +1,26 @@
+{% extends '_base.html' %}
+{% load static %}
+
+{% block title %}Add a Post {% endblock %}
+
+{% block content %}
+  <div class="container mt-4">
+    <div class="row">
+        <div class="col-9">
+            <div class="card shadow my-3 p-5">
+                <h3>Add new Post:</h3>
+                <form method="POST">
+                    {% csrf_token %}
+                    <table>
+
+                        {{ form.as_table }}
+                    </table>
+
+                    <button type="submit" class="btn btn-primary" style="margin-bottom: 10px">Submit</button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</div>
+{% endblock content %}

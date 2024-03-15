@@ -1,0 +1,43 @@
+{% extends '_base.html' %}
+{% load static %}
+{% block title %}Posts{% endblock %}
+{% block content %}
+    <div class="blog-box blog-page">
+        <div class="container">
+            <div class="title"><span>Articles & Blog</span></div>
+            <div class="row">
+                {% for p in posts %}
+                    <div class="col-md-4">
+                        <a href="{% url 'post_detail' p.id %}">
+                            <div class="article-box">
+                                <div class="a-text">
+                                    <h4>{{ p.title }}</h4>
+                                    <p>{{ p.text|slice:':107' }}...</p>
+
+                                </div>
+                        </a>
+                        <div class="a-meta">
+                            <a href="{% url 'post_update' p.id %}" class="btn" style="margin-right: 5px">Edite</a>
+                                <span>{{ p.updated_at }}</span>
+                                <span><i class="fa fa-comment-o"></i>&nbsp;7</span>
+                                <span><i class="fa fa-edit"></i>&nbsp;{{ p.author }}</span>
+
+                        </div>
+                    </div>
+
+                    </div>
+                {% endfor %}
+            <div class="col-md-12 text-center">
+                <ul class="pagination">
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,55 @@
+{% extends '_base.html' %}
+{% load static %}
+
+{% block title %}{% endblock %}
+
+{% block content %}
+
+    <div class="single-body">
+        <div class="container">
+            <div class="title"><span>Post Detail</span></div>
+            <div class="row">
+                <div class="col-md-8">
+                    <h2>{{ post.title }}</h2>
+                    <hr>
+                    <div class="blog-box" style="padding:0;">
+                        <div class="article-box">
+                            <div class="a-meta">
+                                <a href="{% url 'post_update' post.id %}" class="btn">Edite</a>
+                                <a href="{% url 'post_delete' post.id %}" class="btn" style="color:darkred">Delete</a>
+                                <span>{{ post.updated_at }}</span>
+                                <span><i class="fa fa-comment-o"></i>&nbsp;{{ cm }}</span>
+                                <span><i class="fa fa-edit"></i>&nbsp;{{ post.author }}</span>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <p>{{ post.text }}</p>
+                    <h3>Comments</h3>
+                    <div class="pb-cmnt-container">
+                        <div class="panel panel-info">
+                            {% for c in post.comments.all %}
+                                <div class="blog-box" style="padding:0;">
+                                    <div class="article-box">
+                                        <div class="a-meta">
+                                            <h4><i class="fa fa-user"></i>&nbsp;{{ c.name }}:</h4>
+                                            <p style="font-size:16px">{{ c.content }}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr>
+                            {% endfor %}
+                            <div class="panel-body">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock content %}

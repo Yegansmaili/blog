@@ -1,0 +1,619 @@
+/*
+    Theme Name: Migration
+    Theme URL: farabinpendar.com
+    Description: THIS IS Farabinpendar Company Custom Migration Theme
+    Author: Farabinpendar
+    Author URI: Farabinpendar.com
+    Version: 1.0.0 beta
+	  Text Domain: Mifarabin
+*/
+
+@font-face {
+  font-family: "farabin";
+  /*src: url( "fonts/Manrope-VariableFont_wght.ttf" ) format('woff');*/
+}
+*{
+  font-family: farabin;
+  font-weight: 300;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+html{
+  overflow-x: hidden !important;
+}
+body{
+  font-family:farabin;
+  direction: ltr;
+  overflow-x: hidden !important;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(244, 255, 248);
+
+}
+ol,ul{
+  margin: 0;
+  padding: 0;	
+}
+li{
+  list-style: none;
+}
+a,a:hover,a:focus{
+  text-decoration: none;
+}
+a,a:hover,a:focus,figure,figure:hover,figcaption,i,i:hover,img,i{
+  text-decoration: none;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+}
+.clear-fix{
+  clear: both;
+}
+img{
+  max-width: 100%;
+  margin: 0 auto;
+}
+figure{
+  overflow: hidden;
+}
+/*
+.owl-nav{
+  display: none;
+}
+.owl-theme .owl-dots .owl-dot span {
+  background: #ddd;
+  width: 20px;
+}
+.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+  background: #f1c40f;
+  font-size: 12px;
+}
+.owl-theme .owl-dots .owl-dot.active span {
+  background: #f1c40f;
+  font-size: 12px;
+  width: 10px;
+}
+.owl-theme .owl-dots .active{
+  color: #fff;
+}
+*/
+.nopadding{
+  padding: 0;
+}
+h1,
+.h1 {
+  font-size: 22px !important;
+  line-height: 1.5;
+  font-family:'farabin',tahoma;  
+}
+h2,
+.h2 {
+  font-size: 20px !important;
+  line-height: 1.5;  
+  font-family:'farabin',tahoma;
+}
+h3,
+.h3 {
+  font-size: 18px !important;
+  line-height: 1.5; 
+  font-family:'farabin',tahoma;
+}
+h4,
+.h4 {
+  font-size: 16px !important;
+  line-height: 1.5;  
+  font-family:'farabin',tahoma;
+}
+h5,
+.h5 {
+  font-size: 14px !important;
+  line-height: 1.5; 
+  font-family:'farabin',tahoma; 
+}
+h6,
+.h6 {
+  font-size: 12px !important;
+  line-height: 1.5; 
+  font-family:'farabin',tahoma; 
+}
+button,a,i,li:focus{
+  outline: 0;
+}
+.title{
+  text-align: left;
+  padding: 15px 0;
+}
+.title span{
+  display: inline-block;
+  font-size: 18px;
+  border-left: 3px solid #2dbe60;
+  padding-left: 8px;
+}
+
+
+
+
+
+a.main-btn{
+  background-color: #fff;
+  color: #2dbe60;
+  border:1px solid #2dbe60;
+  padding: 6px 25px 7px 26px;
+  font-size: 16px;
+  display: inline-block;
+}
+a.main-btn:hover{
+  color: #fff;
+  background-color: #2dbe60;
+}
+a.order-btn{
+  color: #fff;
+  background-color: #2dbe60;
+  border:1px solid #2dbe60;
+  padding: 6px 25px 7px 26px;
+  font-size: 16px;
+  display: inline-block;
+}
+a.order-btn:hover{
+  background-color: #fff;
+  color: #2dbe60;
+}
+
+
+
+
+
+
+
+.top-menu {
+  width: 100%;
+  background-color: #fff;
+  height: 100px;
+}
+
+.top-menu .main-menu ul li{
+  display: inline-block;
+  margin-right: 15px;
+}
+ .top-menu .main-menu ul li a  {
+  padding: 40px 0;
+  display: inline-block;
+  color: #1d1d1d;
+  font-size: 16px;
+}
+.top-menu .main-menu ul li a:hover{
+  color: #2dbe60;
+}
+.top-menu .logo {
+  text-align:center;
+  margin-top: 18px;
+}
+.top-menu .logo img {
+  display: table;
+  margin: 0 auto;
+}
+
+
+
+.top-heading{
+  padding: 50px 0;
+}
+.top-heading h1{
+  font-size: 50px !important;
+  position: relative;
+  margin-bottom: 40px;
+}
+.top-heading h1:after{
+  content: "";
+  position: absolute;
+  bottom: -15px;
+  right: 0;
+  left: 0;
+  margin: 0 auto;
+  width: 60px;
+  height: 2px;
+  background-color:  #2dbe60;
+  border-radius: 50%;
+}
+.top-heading p{
+  font-size: 18px;
+  line-height: 2.2;
+  margin-bottom: 55px;
+}
+.top-heading .service-box{
+  width: 100%;
+  background-color: #fff;
+
+  border: 1px solid #f7f2f2;
+  height: 150px;
+  box-shadow: rgba(0, 0, 0, 0.01) 0px 2px 4px, rgb(253, 252, 247) 0px -1px 0px;
+}
+.top-heading .service-box h3{
+  margin: 0;
+  padding: 0;
+  border-left: 3px solid #2dbe60;
+  padding: 15px;
+}
+.top-heading .service-box p{
+  line-height: 2.2;
+  color: #333;
+  font-size: 14px;
+  padding: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.contact-us .text-box{
+  display: table;
+  width: 100%;
+  background-color: #fff;
+  padding: 35px 0;
+  border: 1px solid #f7f2f2;
+  border-bottom: 0;
+  color: #2dbe60;
+  box-shadow: rgba(0, 0, 0, 0.01) 0px 2px 4px, rgb(253, 252, 247) 0px -1px 0px;
+}
+.contact-us .text-box p{
+  margin: 0;
+  font-size: 17px;
+  padding-top: 7px;
+}
+.contact-us .text-box a{
+  color: #333;
+}
+
+
+
+
+
+
+.introduction{
+  background-color: #fff;
+  padding: 50px 0;
+}
+.introduction .l-box{
+  margin: 30px 0;
+}
+.introduction .l-box h2{
+  margin: 0;
+  padding: 0;
+  color: #2dbe60;
+}
+.introduction .l-box span{
+  display: block;
+  padding: 15px 0;
+  color: #eec625;
+  font-size: 16px;
+}
+.introduction .l-box p{
+  line-height: 2.2;
+  color: #000;
+  font-size: 15px;
+  text-align: justify;
+  margin-bottom: 18px;
+}
+
+.introduction .r-box{
+  display: table;
+  width: 100%;
+  /*background: url(img/blog/download.svg);*/
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.introduction .r-box .counter-box{
+  margin: 30px 0;
+}
+.introduction .r-box .counter-box img{
+  display: table;
+  height: 70px;
+}
+.introduction .r-box .counter-box span{
+  display: block;
+  font-size: 24px;
+  margin: 10px 0;
+  color: #8e9494;
+}
+.introduction .r-box .counter-box h4{
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #555;
+}
+
+/* #fffdfd */
+
+
+.plans{
+  padding: 50px 0; 
+}
+.plans .plan-box{
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid #f7f2f2;
+  padding: 15px;
+  box-shadow: rgba(0, 0, 0, 0.01) 0px 2px 4px, rgb(253, 252, 247) 0px -1px 0px;
+  margin: 15px 0;
+}
+.plans .plan-box span{
+  display: block;
+  margin: 15px 0;
+}
+.plans .plan-box span.price{
+  font-size: 35px;
+  color: #ffd32a;
+}
+.plans .plan-box span.title-p{
+  font-size: 25px;
+  color: #333;
+}
+.plans .plan-box span.desc{
+  font-size: 15px;
+  color: #2dbe60;
+}
+.plans .plan-box ul{
+  margin: 15px 0;
+}
+.plans .plan-box ul li{
+  display: block;
+  font-size: 15px;
+  border-bottom: 1px solid #faf4f4;
+  padding: 15px;
+  margin: 0 30px;
+}
+.plans .plan-box a{
+  margin: 15px 0;
+  padding-left:40px;
+  padding-right:40px;
+}
+
+
+
+
+
+
+
+.faq {
+padding: 50px 0;
+background-color: #fff;
+}
+.faq .faq-img img{
+  display: table;
+  margin: 0 auto;
+}
+.faq .faq-accardion .accardion-box{
+  margin-bottom: 15px;
+}
+.faq .faq-accardion .accardion-box h4{
+  border-bottom: 1px solid #eee;
+  padding-bottom: 12px;
+  position: relative;
+  cursor: pointer;
+  font-weight: bold;
+}
+.faq .faq-accardion .accardion-box h4 span{
+  position: absolute;
+  right: 0;
+  bottom: 10px;
+  width: 30px;
+  height: 30px;
+  font-size: 25px;
+  text-align: center;
+  line-height: 30px;
+}
+.faq .faq-accardion .accardion-box p{
+  line-height: 2.2;
+  font-size: 15px;
+  border-bottom: 2px solid #2dbe60;
+  display: none;
+  padding-bottom: 15px;
+}
+
+
+
+
+
+
+.description-box{
+  padding: 50px 0;
+}
+.description-box .main-text p{
+  line-height: 2.2;
+  font-size: 15px;
+  text-align: justify;
+}
+.description-box .main-text h2{
+  font-weight: bold;
+}
+.description-box .main-text img{
+  margin: 0 auto;
+  display: table;
+  height: 150px;
+}
+
+.description-box .text-boxs{
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid #f7f2f2;
+  padding: 15px;
+  box-shadow: rgba(0, 0, 0, 0.01) 0px 2px 4px, rgb(253, 252, 247) 0px -1px 0px;
+}
+.description-box .text-boxs img{
+  height: 80px;
+}
+.description-box .text-boxs h3{
+  color: #000;
+}
+.description-box .text-boxs p{
+ line-height: 2.2;
+ text-align: justify;
+ font-size: 15px;
+ color: #666;
+}
+
+
+
+
+
+
+
+
+.blog-box{
+  padding: 50px 0;
+  background-color: #faf4f4;
+}
+.blog-page{
+  background-color: transparent;
+}
+.blog-box .article-box{
+  width: 100%;
+}
+.blog-page .article-box{
+  margin-bottom: 30px;
+}
+.blog-box .article-box .a-meta{
+  padding: 15px;
+}
+.blog-box .article-box .a-meta span{
+  display: inline-block;
+  margin-right: 10px;
+  color: #000;
+}
+.blog-box .article-box .a-meta span i{
+  color: #bba7a7;
+}
+.blog-box .article-box .a-text {
+  border: 1px solid #faf4f4;
+  padding: 15px;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+.blog-box .article-box .a-text:hover{
+  border: 1px solid #a59e9e;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+.blog-box .article-box .a-text p{
+  height: 50px;
+  overflow: hidden;
+  font-size: 15px;
+  color: #333;
+  margin-bottom: 15px;
+  line-height: 1.8;
+}
+.blog-box .article-box .a-text h4{
+  font-weight: bold;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #af901a;
+}
+.blog-box .text-right a.main-btn{
+  margin-top: 30px;
+}
+
+
+
+.levels{
+  padding: 50px 0;
+  /*background: url(img/bgd.png);*/
+  background-position: center center;
+}
+.coln{
+  width: 120px;
+  height: 120px;
+  line-height: 106px;
+  border-radius: 50%;
+  border: 5px solid #ffd32a;
+  margin: 0 auto;
+  display: inline-block;
+  text-align: center;
+  background: #2dbe60;
+}
+.coln span{
+  font-size: 40px;
+  color: #fff;
+
+}
+.coln h3{
+  margin: 5px 0;
+  padding: 0;
+}
+
+
+
+
+
+
+.footer{
+  color: #fff;
+  background: #333;
+  padding-top: 15px;
+}
+.footer .footer-desc h3{
+  font-size: 24px !important;
+}
+.footer .footer-desc p{
+  font-size: 16px;
+}
+.footer .footer-social{
+  margin: 25px 0;
+}
+.footer .footer-social ul li{
+  display: inline-block;
+}
+.footer .footer-social ul li a{
+  display: inline-block;
+  width: 35px;
+  height: 33px;
+  line-height: 33px;
+  font-size: 25px;
+  background-color: #2dbe60;
+  color: #fff;
+  transition: none;
+}
+.footer .footer-social ul li a:hover{
+  background-color: #fff;
+  color: #2dbe60;
+  transition: none;
+}
+.single-body{
+  line-height: 2.5;
+  text-align: justify;
+}
+.pb-cmnt-textarea {
+  resize: none;
+  padding: 20px;
+  height: 130px;
+  width: 100%;
+  border: 1px solid #F2F2F2;
+}
+.my_li{
+  font-size: 16px;
+  float: right;
+}
+.btn_sub {
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
