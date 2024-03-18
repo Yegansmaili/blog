@@ -18,9 +18,9 @@
                         </a>
                         <div class="a-meta">
                             <a href="{% url 'post_update' p.id %}" class="btn" style="margin-right: 5px">Edite</a>
-                                <span>{{ p.updated_at }}</span>
-                                <span><i class="fa fa-comment-o"></i>&nbsp;7</span>
-                                <span><i class="fa fa-edit"></i>&nbsp;{{ p.author }}</span>
+                            <span>{{ p.updated_at }}</span>
+                            <span><i class="fa fa-comment-o"></i>&nbsp;7</span>
+                            <span><i class="fa fa-edit"></i>&nbsp;{{ p.author }}</span>
 
                         </div>
                     </div>
@@ -29,11 +29,16 @@
                 {% endfor %}
             <div class="col-md-12 text-center">
                 <ul class="pagination">
-                    <li><a href="#">1</a></li>
-                    <li><a href="#">2</a></li>
-                    <li><a href="#">3</a></li>
-                    <li><a href="#">4</a></li>
-                    <li><a href="#">5</a></li>
+                    {% if page_obj.has_previous %}
+                        <li><a href="?page={{ page_obj.previous_page_number }}">{{ page_obj.previous_page_number }}</a>
+                        </li>
+
+                    {% endif %}
+                    <li><a href="#">{{ page_obj.number }}</a></li>
+                    {% if page_obj.has_next %}
+                        <li><a href="?page={{ page_obj.next_page_number }}">{{ page_obj.next_page_number }}</a></li>
+                    {% endif %}
+
                 </ul>
             </div>
         </div>

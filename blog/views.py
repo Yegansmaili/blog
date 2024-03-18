@@ -10,6 +10,7 @@ from .models import *
 class PostListView(generic.ListView):
     template_name = 'blog/posts_list.html'
     context_object_name = 'posts'
+    paginate_by = 2
 
     def get_queryset(self):
         return Post.objects.filter(status='pub').order_by('-updated_at')
